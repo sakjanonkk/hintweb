@@ -11,7 +11,7 @@ const HintWebsite = () => {
       // Fetch hints data
       const dummyData = [
         { id: 1, hint: "S" },
-        { id: 2, hint: "Tall 175 cm." },
+        { id: 2, hint: "Tall about 170 - 190 cm" },
         { id: 3, hint: "Best Valorant Player For SEA SERVER" },
         { id: 4, hint: "Ming's friend" },
       ];
@@ -23,37 +23,43 @@ const HintWebsite = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen  bg-banner-bg bg-no-repeat bg-center bg-cover">
       <div className="container mx-auto px-4 py-8">
         <div className="fix">
           <div className="flex justify-center items-center  uppercase  text-white text-3xl text-center my-8">
             <Type
-              className="text-center text-black shadow-inner shadow-black"
+              className="text-center text-white shadow-inner shadow-[#38c7ff]"
               strings={[
-                "Welcome to my hint website",
-                "I'm your P' Take ",
-                "Hint will be shown below",
+                " ..",
+                " Welcome to hint website",
+                " I'm your P' Take ",
+                " Hints will be shown below",
               ]}
-              typeSpeed={100}
-              backSpeed={100}
+              typeSpeed={120}
+              backSpeed={120}
               loop
             />
           </div>
-          {/* <h1 className="text-3xl font-bold mb-4 text-center mt-6">
-            "คำใบ้งับ"
-          </h1> */}
-          <button
-            className="bg-[#4ed6ff] hover:bg-blue-700 shadow-cyan-500/50 text-white font-bold py-2 px-4 rounded block mx-auto mb-4 shadow-inner"
-            onClick={fetchHints}
-          >
-            {hints.length === 0 ? "Get hints" : "Hide hints"}
-          </button>
+          <div className="flex">
+            <button className="bg-[#043c4d] hover:bg-[#1a9dc5] shadow-cyan-500/50 text-white font-bold py-2 px-4 rounded block mx-auto mb-4 shadow-inner">
+              {hints.length === 0 ? "Get hints" : "ahhahha"}
+            </button>{" "}
+            <button className="bg-[#488396] hover:bg-[#1a9dc5] shadow-cyan-500/50 text-white font-bold py-2 px-4 rounded block mx-auto mb-4 shadow-inner">
+              {hints.length === 0 ? "Get hints" : "ahahhaha"}
+            </button>
+            <button
+              className="bg-[#4ed6ff] hover:bg-[#1a9dc5] shadow-cyan-500/50 text-white font-bold py-2 px-4 rounded block mx-auto mb-4 shadow-inner"
+              onClick={fetchHints}
+            >
+              {hints.length === 0 ? "Get hints" : "Hide hints"}
+            </button>
+          </div>
         </div>
-        <div>
+        <div className="flex justify-center">
           <TransitionGroup component="ul" className="list">
             {hints.map((hint) => (
               <CSSTransition key={hint.id} classNames="fade" timeout={300}>
-                <li className="bg-gray-100 rounded p-2 mb-2 shadow-xl ">
+                <li className="bg-gray-50 rounded p-2 mb-2 shadow-xl">
                   {hint.hint}
                 </li>
               </CSSTransition>

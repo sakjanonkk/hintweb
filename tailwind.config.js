@@ -3,6 +3,7 @@ module.exports = {
   darkmode: "class",
   theme: {
     extend: {
+      backgroundImage: { "banner-bg": "url('/public/background.png')" },
       margin: {
         320: "320px",
       },

@@ -15,8 +15,10 @@
     "react-icons": "^4.8.0",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
+    "react-tsparticles": "^2.10.1",
     "react-typed": "^1.2.0",
     "react-vertical-timeline-component": "^3.6.0",
+    "tsparticles": "^2.10.1",
     "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.0"
   },
